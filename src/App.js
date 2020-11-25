@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import { Button, FormControl, InputLabel, Input } from "@material-ui/core";
+import Todo from "./Todo";
+import db from "./firebase";
 
 function App() {
-  const [todos, setTodos] = useState(["Take dogs for a walk", "Read a book"]);
+  const [todos, setTodos] = useState([]);
   const [input, setInput] = useState("");
+  //this code fires when app.js loads
+  useEffect(() => {
+    db.collection("todos").onSnapshot((snapshot) => {
+      console.log(snapshot.docs.map((doc) => doc.data().todo));
+
+      setTodos(snapshot.docs.map((doc) => doc.data().todo));
+    });
+  }, []);
 
   const addTodo = (event) => {
     event.preventDefault(); // will stop refreshing
@@ -36,7 +46,7 @@ function App() {
       </form>
       <ul>
         {todos.map((todo) => (
-          <li>{todo}</li>
+          <Todo text={todo} />
         ))}
       </ul>
     </div>
