@@ -9,7 +9,6 @@ import {
   ListItemText,
   Modal,
 } from "@material-ui/core";
-import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 import DeleteIcon from "@material-ui/icons/Delete";
 import db from "./firebase";
 import makeStyles from "@material-ui/core/styles/makeStyles";
@@ -30,10 +29,6 @@ function Todo(props) {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState();
-
-  const handleOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
