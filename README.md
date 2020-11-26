@@ -1,6 +1,9 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<h1 align="center">React Todo Application</h1>
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/9fac6f8c-6770-4c6c-9d1d-9c9514864a33/deploy-status)](https://app.netlify.com/sites/cem-todo/deploys?filter=master)
+<a style="text-align: center;" href="https://www.todo.cemcebi.com/"><img src="https://img.shields.io/static/v1?label=&labelColor=505050&message=website&color=%230076D6&style=flat&logo=google-chrome&logoColor=%230076D6" alt="website"/></a>
 
 ## Available Scripts
 
