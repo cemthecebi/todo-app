@@ -30,6 +30,10 @@ function App() {
     setInput(""); // clear input
   };
 
+  useEffect(() => {
+    document.title = "React Todo Application";
+  }, []);
+
   return (
     <div className="App">
       <h1>Todo List! </h1>
